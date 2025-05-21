@@ -1,0 +1,51 @@
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: black;
+      }
+      .loader {
+        width: 20rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: rgb(147, 77, 208);
+        position: relative;
+        animation: circleloader 2s linear infinite reverse;
+      }
+
+      .loader::after {
+        content: "";
+        border-radius: 50%;
+        aspect-ratio: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 17rem;
+        background-color: black;
+      }
+
+      .loader::before{
+        content: "";
+        position: absolute;
+        top: -2.1rem;
+        left: 8rem;
+        z-index: 1;
+        width: 5rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color:rgb(147, 77, 208) ;
+        box-shadow: rgb(147, 77, 208)0 0 1rem,rgb(147, 77, 208)0 0 1.5rem,rgb(147, 77, 208)0 0 2.5rem,rgb(147, 77, 208)0 0 3rem;
+      }
+
+      @keyframes circleloader{
+        100%{
+            rotate: 360deg;
+        }
+      }
